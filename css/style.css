@@ -1,0 +1,301 @@
+:root {
+  --clr-primary: #383535;
+
+  --ff-primary: 'Be Vietnam Pro', sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+}
+
+body, html {
+  width: 100vw;
+  font-family: var(--ff-primary);
+  overflow-x: hidden;
+  scroll-padding-top: 4.5rem;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: var(--clr-primary);
+  width: 100vw;
+  margin-bottom: 6rem;
+}
+
+/********************** Navbar ******************************/
+nav{
+  height: 6rem;
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  justify-content: space-between;
+}
+
+/*Styling logo*/
+.logo{
+  display: flex;
+  margin-left: 5vw;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  align-self: center;
+  cursor: pointer;
+}
+
+/*Styling Links*/
+.nav-links{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin-right: 5vw;
+}
+
+.nav-links li a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: larger;
+}
+
+.nav-links li a:hover {
+  text-decoration-thickness: .5rem;
+  text-decoration: underline;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+  width: 30px;
+  height:3px;
+  background: #f2f5f7;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger{
+  display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 768px){
+  nav{
+    position: fixed;
+    z-index: 100;
+  }
+  .hamburger{
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+  .nav-links{
+    position: fixed;
+    top: 5rem;
+    background: #333333;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 0.5s ease-out;
+    padding-top: 1rem;
+  }
+  .nav-links.open{
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1800px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: all;
+    border-top: .125rem solid white;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1){
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2){
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3){
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4){
+    transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5){
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(6){
+    transition: all 0.5s ease 0.9s;
+    margin: 0;
+  }
+  .nav-links li:nth-child(7){
+    transition: all 0.5s ease 1s;
+    margin: 0;
+  }
+  .nav-links li a {
+    margin: 1.5rem 0;
+  }
+  li.fade{
+    opacity: 1;
+  }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  transition: all 0.7s ease;
+  width:0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/**********************about-us******************************/
+
+#about-us .section-title{
+  text-align: center;
+  color: #333;
+}
+
+.about-grid{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-us-image {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-us-name{
+  font-weight: bolder;
+  font-size: 1.7rem;
+  margin-bottom: 1.2rem;
+  white-space: nowrap;
+}
+
+.gallery-item {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem;
+}
+
+.about-me-info {
+  width: 500px;
+}
+
+/**********************social-media******************************/
+.social-menu ul{
+  position: relative;
+  display: flex;
+  text-align: center;
+  z-index: 10;
+}
+
+.social-menu ul li{
+  list-style: none;
+  margin: 0.5rem 0.5rem;
+  display: inline-block;
+}
+
+.social-menu ul li .fab{
+  font-size: 2em;
+  line-height: 60px;
+  transition: 0.3s;
+  color: #000;
+}
+
+.social-menu ul li .fab:hover{
+  color: #fff;
+}
+
+.social-menu ul li a{
+  left: 100%;
+  display: block;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #fffcf8;
+  justify-content: center;
+  text-align: center;
+  transition: 0.6s;
+  box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover{
+  transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+  background-color: rgba(0, 0, 0, 0.829);
+}
+.social-menu ul li:nth-child(2) a:hover{
+  background-color: #0077b5;
+}
+
+/**********************footer******************************/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--clr-primary);
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 4rem;
+}
+
+.divider {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.row{
+  width:100%;
+  padding:0;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position:relative;
+}
+
+.vertical {
+  margin: 0 4rem;
+  height: auto;
+  border-left: thick solid #ffffff;
+}
+
+address {
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  height: 3rem;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px){
+  .vertical {
+    margin: 0 2rem;
+  }
+}
+
