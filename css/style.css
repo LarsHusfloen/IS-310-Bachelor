@@ -11,15 +11,32 @@
 body, html {
   width: 100vw;
   font-family: var(--ff-primary);
+  color: var(--clr-primary);
   overflow-x: hidden;
   scroll-padding-top: 4.5rem;
   scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  background: #ecf0f1;;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 header {
   background: var(--clr-primary);
   width: 100vw;
   margin-bottom: 6rem;
+}
+
+
+.section-title{
+  text-align: center;
+  color: var(--clr-primary);
+  font-size: 3rem;
 }
 
 /********************** Navbar ******************************/
@@ -162,11 +179,24 @@ nav{
   transform: rotate(45deg) translate(-5px,-6px);
 }
 
-/**********************about-us******************************/
-
-#about-us .section-title{
+/********************** team ******************************/
+#team {
+  background: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 0 5rem;
+  max-width: 100rem;
   text-align: center;
-  color: #333;
+}
+
+#team h1{
+  margin-bottom: 0;
+}
+
+/********************** about-us ******************************/
+#about-us {
+  background: #ecf0f1;
 }
 
 .about-grid{
@@ -182,31 +212,73 @@ nav{
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
+  margin: 0 auto;
+}
+
+#img-aleksander {
+  object-position: 50% 18%;
+}
+
+#img-hermann {
+  object-position: 50% 10%;
+}
+
+#img-lars {
+  object-position: 50% 10%;
+}
+
+#img-bjørnar {
+  object-position: 50% 10%;
+}
+
+#img-kristoffer {
+  object-position: 50% 30%;
 }
 
 .about-us-name{
   font-weight: bolder;
   font-size: 1.7rem;
-  margin-bottom: 1.2rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  text-align: center;
   white-space: nowrap;
 }
 
 .gallery-item {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 3rem;
   margin: 2rem;
+}
+
+.about-me-social {
+  justify-items: center;
+  width: 300px;
 }
 
 .about-me-info {
   width: 500px;
 }
 
+@media screen and (max-width: 600px){
+  .about-me-info {
+    text-align: center;
+    width: 300px;
+  }
+}
+
+.about-me-info h2 {
+  margin-top: 0;
+}
+
 /**********************social-media******************************/
 .social-menu ul{
   position: relative;
   display: flex;
-  text-align: center;
+  justify-content: center;
+  padding: 0;
+  margin: 1rem 0 0 0;
   z-index: 10;
 }
 
@@ -223,7 +295,7 @@ nav{
   color: #000;
 }
 
-.social-menu ul li .fab:hover{
+.social-menu ul li a:hover .fab{
   color: #fff;
 }
 
@@ -232,7 +304,7 @@ nav{
   display: block;
   width: 4rem;
   border-radius: 50%;
-  background-color: #fffcf8;
+  background-color: #f7f0e7;
   justify-content: center;
   text-align: center;
   transition: 0.6s;
@@ -250,6 +322,52 @@ nav{
   background-color: #0077b5;
 }
 
+/**********************divider trees******************************/
+@media screen and (max-width: 600px){
+
+}
+
+/**********************projects******************************/
+#projects {
+  background: white;
+  padding-bottom: 5rem;
+}
+
+#projects .section-title {
+  margin-top: 0;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.project {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.project .skatteetaten {
+  height: auto;
+  width: 50%;
+}
+
+.project .uia {
+  height: auto;
+  width: 100%;
+}
+
+.project img {
+  height: 8rem;
+  width: auto;
+  align-self: center;
+}
+
 /**********************footer******************************/
 footer {
   display: flex;
@@ -264,7 +382,6 @@ footer {
 
 .divider {
   width: 100%;
-  margin-bottom: 2rem;
 }
 
 .row{
