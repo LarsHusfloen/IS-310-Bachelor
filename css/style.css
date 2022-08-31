@@ -324,7 +324,9 @@ nav{
 
 /**********************divider trees******************************/
 @media screen and (max-width: 600px){
-
+  .sep8 {
+    transform: scale(1.7);
+  }
 }
 
 /**********************projects******************************/
@@ -368,6 +370,11 @@ nav{
   align-self: center;
 }
 
+@media screen and (max-width: 600px){
+  #projects .section-title{
+    margin-top: 1rem;
+  }
+}
 /**********************footer******************************/
 footer {
   display: flex;
