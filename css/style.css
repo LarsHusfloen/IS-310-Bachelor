@@ -20,6 +20,11 @@ body, html {
   background: #ecf0f1;;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -50,7 +55,17 @@ nav{
   justify-content: space-between;
 }
 
-/*Styling logo*/
+.logo {
+  color: white;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  font-size: 2rem;
+  margin-left: 5vw;
+  cursor: pointer;
+}
+
+/*!*Styling logo*!
 .logo{
   display: flex;
   margin-left: 5vw;
@@ -63,7 +78,7 @@ nav{
   width: auto;
   align-self: center;
   cursor: pointer;
-}
+}*/
 
 /*Styling Links*/
 .nav-links{
