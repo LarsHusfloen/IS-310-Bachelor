@@ -197,16 +197,86 @@ nav{
 /********************** team ******************************/
 #team {
   background: #ecf0f1;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
   margin: 0 5rem;
-  max-width: 100rem;
-  text-align: center;
+}
+
+#team ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-left: 4rem;
+  justify-content: center;
+  transform: scale(1.15);
+}
+
+#team ul li{
+  margin-right: 2.5rem;
+  margin-top: .5rem;
 }
 
 #team h1{
   margin-bottom: 0;
+}
+
+.team-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 65rem;
+  text-align: center;
+}
+
+.skills {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills h2 {
+  margin-bottom: .5rem;
+}
+
+.c-sharp,
+.dot-net,
+.js,
+.java,
+.react,
+.python {
+  width: 30px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.js,
+.html,
+.css,
+.spring,
+.docker{
+  transform: scale(1.2);
+}
+
+.html{
+  color: orange;
+}
+
+.css {
+  color: deepskyblue;
+}
+
+.spring {
+  color: limegreen;
+}
+
+.sql {
+  color: steelblue;
+}
+
+.docker {
+  color: #4690ec;
 }
 
 /********************** about-us ******************************/
