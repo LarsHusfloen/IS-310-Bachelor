@@ -44,6 +44,23 @@ header {
   font-size: 3rem;
 }
 
+.hidden {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 1.25s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
 /********************** Navbar ******************************/
 nav{
   height: 6rem;
@@ -208,6 +225,7 @@ nav{
   margin-left: 4rem;
   justify-content: center;
   transform: scale(1.15);
+  max-width: 25rem;
 }
 
 #team ul li{
@@ -245,6 +263,7 @@ nav{
 .js,
 .java,
 .react,
+.maria-db,
 .python {
   width: 30px;
   height: 20px;
@@ -255,6 +274,7 @@ nav{
 .html,
 .css,
 .spring,
+.maria-db,
 .docker{
   transform: scale(1.2);
 }
@@ -282,6 +302,7 @@ nav{
 /********************** about-us ******************************/
 #about-us {
   background: #ecf0f1;
+  margin-top: 5rem;
 }
 
 .about-grid{
@@ -418,6 +439,9 @@ nav{
 #projects {
   background: white;
   padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #projects .section-title {
@@ -425,18 +449,64 @@ nav{
 }
 
 .project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10rem;
+  display: grid;
+  width: 50%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "project-info project-info project-info stack"
+  "desktop-1 desktop-1 mobile-1 mobile-2"
+  "desktop-2 desktop-2 mobile-1 mobile-2 ";
+  gap: 1.5rem;
 }
 
-.project {
-  width: 350px;
-  height: 350px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+hr {
+  margin: 5rem auto;
+  border: 0;
+  height: 4px;
+  background-image: linear-gradient(to right, transparent, #CCC, transparent);
+  width: 60%;
+}
+
+.project-stack h2 {
+  white-space: nowrap;
+}
+
+.amv-stack {
+  transform: scale(1.2);
+}
+
+.amv-stack li {
+  margin: .25rem 0;
+}
+
+.project-info {
+  grid-area: project-info;
+}
+
+.project-stack {
+  grid-area: stack;
+}
+
+.desktop-1 {
+  grid-area: desktop-1;
+}
+
+.desktop-2 {
+  grid-area: desktop-2;
+}
+
+.mobile-1 {
+  grid-area: mobile-1;
+}
+
+.mobile-2 {
+  grid-area: mobile-2;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .project .skatteetaten {
@@ -447,12 +517,46 @@ nav{
 .project .uia {
   height: auto;
   width: 100%;
+  padding: 0 2rem;
 }
 
 .project img {
   height: 8rem;
   width: auto;
   align-self: center;
+}
+
+@media screen and (max-width: 1440px) {
+  .project-container {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-container {
+    grid-template-areas:
+  "project-info project-info project-info project-info"
+  "stack stack stack stack"
+  "desktop-1 desktop-1 desktop-1 desktop-1"
+  "desktop-2 desktop-2 desktop-2 desktop-2"
+  "mobile-1 mobile-1 mobile-2 mobile-2";
+  }
+
+  .project-stack h2 {
+    text-align: center;
+  }
+
+  .amv-stack {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 35px !important;
+    margin-top: .25rem;
+  }
+
+  .amv-stack li {
+    margin: .25rem 1rem;
+  }
 }
 
 @media screen and (max-width: 600px){
@@ -474,6 +578,7 @@ footer {
 
 .divider {
   width: 100%;
+  z-index: 10;
 }
 
 .row{
