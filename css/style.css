@@ -61,6 +61,11 @@ header {
   }
 }
 
+.contact-info {
+  color: #0077b5;
+  text-decoration: underline;
+}
+
 /********************** Navbar ******************************/
 nav{
   height: 6rem;
@@ -302,7 +307,6 @@ nav{
 /********************** about-us ******************************/
 #about-us {
   background: #ecf0f1;
-  margin-top: 5rem;
 }
 
 .about-grid{
@@ -451,12 +455,31 @@ nav{
 .project-container {
   display: grid;
   width: 50%;
+  gap: 1.5rem;
+}
+
+.amv-container{
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
   "project-info project-info project-info stack"
   "desktop-1 desktop-1 mobile-1 mobile-2"
   "desktop-2 desktop-2 mobile-1 mobile-2 ";
-  gap: 1.5rem;
+}
+
+.ske-container {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "project-info project-info project-info stack"
+  "desktop-1 desktop-1 mobile-1 mobile-2"
+  "desktop-2 desktop-2 desktop-3 desktop-3";
+}
+
+.kunnskap-container {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "project-info project-info project-info stack"
+  "desktop-1 desktop-1 mobile-1 mobile-2"
+  "desktop-2 desktop-2 desktop-3  desktop-3";
 }
 
 hr {
@@ -495,6 +518,10 @@ hr {
   grid-area: desktop-2;
 }
 
+.desktop-3 {
+  grid-area: desktop-3;
+}
+
 .mobile-1 {
   grid-area: mobile-1;
 }
@@ -509,23 +536,6 @@ hr {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.project .skatteetaten {
-  height: auto;
-  width: 50%;
-}
-
-.project .uia {
-  height: auto;
-  width: 100%;
-  padding: 0 2rem;
-}
-
-.project img {
-  height: 8rem;
-  width: auto;
-  align-self: center;
-}
-
 @media screen and (max-width: 1440px) {
   .project-container {
     width: 75%;
@@ -533,7 +543,7 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
-  .project-container {
+  .amv-container {
     grid-template-areas:
   "project-info project-info project-info project-info"
   "stack stack stack stack"
