@@ -470,16 +470,8 @@ nav{
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
   "project-info project-info project-info stack"
-  "desktop-1 desktop-1 mobile-1 mobile-2"
-  "desktop-2 desktop-2 desktop-3 desktop-3";
-}
-
-.kunnskap-container {
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas:
-  "project-info project-info project-info stack"
-  "desktop-1 desktop-1 mobile-1 mobile-2"
-  "desktop-2 desktop-2 desktop-3  desktop-3";
+  "mobile-1 mobile-2 desktop-3 desktop-3"
+  "desktop-1 desktop-1 desktop-2 desktop-2 ";
 }
 
 hr {
@@ -494,11 +486,11 @@ hr {
   white-space: nowrap;
 }
 
-.amv-stack {
+.stack {
   transform: scale(1.2);
 }
 
-.amv-stack li {
+.stack li {
   margin: .25rem 0;
 }
 
@@ -552,11 +544,21 @@ hr {
   "mobile-1 mobile-1 mobile-2 mobile-2";
   }
 
+  .ske-container {
+    grid-template-areas:
+  "project-info project-info project-info project-info"
+  "stack stack stack stack"
+  "mobile-1 mobile-1 mobile-2 mobile-2"
+  "desktop-1 desktop-1 desktop-1 desktop-1"
+  "desktop-2 desktop-2 desktop-2 desktop-2"
+  "desktop-3 desktop-3 desktop-3 desktop-3";
+  }
+
   .project-stack h2 {
     text-align: center;
   }
 
-  .amv-stack {
+  .stack {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -564,7 +566,7 @@ hr {
     margin-top: .25rem;
   }
 
-  .amv-stack li {
+  .stack li {
     margin: .25rem 1rem;
   }
 }
