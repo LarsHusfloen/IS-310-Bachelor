@@ -13,7 +13,7 @@ body, html {
   font-family: var(--ff-primary);
   color: var(--clr-primary);
   overflow-x: hidden;
-  scroll-padding-top: 4.5rem;
+  scroll-padding-top: 7rem;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
