@@ -269,7 +269,9 @@ nav{
 .java,
 .react,
 .maria-db,
-.python {
+.python,
+.azure,
+.grafana {
   width: 30px;
   height: 20px;
   object-fit: contain;
